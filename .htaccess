@@ -46,7 +46,7 @@ ErrorDocument 404 /index.html
   ExpiresByType image/gif                 "access plus 1 year"
   ExpiresByType image/webp                "access plus 1 year"
   ExpiresByType image/svg+xml             "access plus 1 year"
-  ExpiresByType image/x-icon             "access plus 1 year"
+  ExpiresByType image/x-icon              "access plus 1 year"
 
   # Fonts
   ExpiresByType font/woff                 "access plus 1 year"
@@ -71,8 +71,10 @@ ErrorDocument 404 /index.html
   Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
 
   # Content Security Policy
+  # script-src allows 'self' and a SHA-256 hash for the single inline script
+  # that sets the footer year (see index.html). All other scripts are external.
   Header always set Content-Security-Policy "default-src 'self'; \
-    script-src 'self' 'unsafe-inline'; \
+    script-src 'self' 'sha256-XzgUe5OFqmw92fRcUj4AjwYpGUNdPyxTpzMkUICgemM='; \
     style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; \
     font-src 'self' https://fonts.gstatic.com; \
     img-src 'self' data:; \
