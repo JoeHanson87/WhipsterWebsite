@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Whipster – Ice Cream Truck Tracker</title>
+  <meta name="description" content="Whipster lets you track ice cream trucks and food vans in real time. Tap the Jingle button and bring the van to you!" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="Images/whipster_icon.png" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAV
+  ══════════════════════════════════════════════════════════ -->
+  <nav>
+    <a class="nav-logo" href="#hero">
+      <img src="Images/whipster_icon.png" alt="Whipster icon" />
+      <span>Whipster</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#trucks">Trucks</a></li>
+      <li><a href="#how-it-works">How it Works</a></li>
+      <li><a class="nav-cta" href="#download">Download</a></li>
+    </ul>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-inner">
+      <img class="hero-icon" src="Images/whipster_icon.png" alt="Whipster app icon" />
+      <span class="hero-tagline">🍦 Available on iOS &amp; Android</span>
+      <h1>Your Neighbourhood<br /><span>Ice Cream Tracker</span></h1>
+      <p>
+        Never miss the ice cream truck again! Whipster shows you exactly where
+        the van is, sends you a heads-up the moment it rolls into your area, and
+        even lets you ring its virtual jingle to wave it down.
+      </p>
+      <div class="hero-badges reveal">
+        <!-- iOS -->
+        <a class="badge badge-ios" href="#download" title="Coming soon on the App Store">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+          </svg>
+          <div class="badge-text">
+            <span class="badge-sub">Download on the</span>
+            <span class="badge-main">App Store</span>
+          </div>
+        </a>
+        <!-- Android -->
+        <a class="badge badge-android" href="#download" title="Coming soon on Google Play">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3.18 23.76c.33.18.71.19 1.05.04l10.27-5.93-2.17-2.17-9.15 8.06zm14.42-8.34L5.59 21.79l2.11 2.11 10.21-5.89-0.31-.59zM1.5 1.37C1.19 1.72 1 2.22 1 2.87v18.26c0 .65.19 1.15.5 1.5l.08.07 10.23-10.23v-.24L1.58 1.3l-.08.07zm20.1 9.12l-2.9-1.68-2.3 2.3 2.3 2.3 2.92-1.68c.83-.48.83-1.27-.02-1.24z"/>
+          </svg>
+          <div class="badge-text">
+            <span class="badge-sub">Get it on</span>
+            <span class="badge-main">Google Play</span>
+          </div>
+        </a>
+      </div>
+      <p class="coming-soon-note">Download links coming soon</p>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FEATURES
+  ══════════════════════════════════════════════════════════ -->
+  <section id="features">
+    <div class="section-header reveal">
+      <span class="section-label" style="background:#ffe0e0;color:#c0392b;">✨ Features</span>
+      <h2>Everything you need to catch the van</h2>
+      <p>Whipster packs a handful of delightful features into one sweet little app.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card fc-1 reveal">
+        <div class="feature-icon">📍</div>
+        <h3>Live Truck Tracking</h3>
+        <p>See exactly where nearby ice cream trucks and food vans are on a live map – updated in real time.</p>
+      </div>
+      <div class="feature-card fc-2 reveal">
+        <div class="feature-icon">🔔</div>
+        <h3>Nearby Notifications</h3>
+        <p>Get a push notification the moment an ice cream truck enters your neighbourhood, so you never miss it.</p>
+      </div>
+      <div class="feature-card fc-3 reveal">
+        <div class="feature-icon">🎵</div>
+        <h3>Tap the Jingle</h3>
+        <p>Hit the Jingle button to signal to vans that you'd love a visit. It's your digital wave to the driver!</p>
+      </div>
+      <div class="feature-card fc-4 reveal">
+        <div class="feature-icon">🚚</div>
+        <h3>Multiple Van Types</h3>
+        <p>Track ice cream trucks, burger vans, pizza trucks, hot dog carts, taco trucks, and donut vans all in one place.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       TRUCKS
+  ══════════════════════════════════════════════════════════ -->
+  <section id="trucks">
+    <div class="section-header reveal">
+      <span class="section-label" style="background:#e0f7fa;color:#00838f;">🚦 Truck Types</span>
+      <h2>More than just ice cream</h2>
+      <p>Whipster tracks a whole fleet of food vans rolling through your neighbourhood.</p>
+    </div>
+
+    <div class="trucks-grid">
+      <div class="truck-card featured reveal">
+        <img src="Images/icecreamtruck.png" alt="Ice cream truck" />
+        <span>Ice Cream</span>
+      </div>
+      <div class="truck-card reveal">
+        <img src="Images/burgertruck.png" alt="Burger truck" />
+        <span>Burger Van</span>
+      </div>
+      <div class="truck-card reveal">
+        <img src="Images/pizzatruck.png" alt="Pizza truck" />
+        <span>Pizza Truck</span>
+      </div>
+      <div class="truck-card reveal">
+        <img src="Images/hotdogtruck.png" alt="Hot dog truck" />
+        <span>Hot Dog Cart</span>
+      </div>
+      <div class="truck-card reveal">
+        <img src="Images/tacotruck.png" alt="Taco truck" />
+        <span>Taco Truck</span>
+      </div>
+      <div class="truck-card reveal">
+        <img src="Images/donuttruck.png" alt="Donut truck" />
+        <span>Donut Van</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       HOW IT WORKS
+  ══════════════════════════════════════════════════════════ -->
+  <section id="how-it-works">
+    <div class="section-header reveal">
+      <span class="section-label" style="background:#f3e0ff;color:#7b1fa2;">🗺️ How it Works</span>
+      <h2>Ice cream in four easy steps</h2>
+      <p>Getting a scoop has never been simpler.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step s1 reveal">
+        <div class="step-number">1</div>
+        <h3>Download the App</h3>
+        <p>Grab Whipster for free on the App Store or Google Play.</p>
+      </div>
+      <div class="step s2 reveal">
+        <div class="step-number">2</div>
+        <h3>Allow Location</h3>
+        <p>Enable location permissions so Whipster can find trucks near you.</p>
+      </div>
+      <div class="step s3 reveal">
+        <div class="step-number">3</div>
+        <h3>Watch the Map</h3>
+        <p>See vans moving on the live map and get notified when one is close.</p>
+      </div>
+      <div class="step s4 reveal">
+        <div class="step-number">4</div>
+        <h3>Tap the Jingle! 🎵</h3>
+        <p>Signal your craving with the Jingle button – and wait for the sweet sound of the van!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       DOWNLOAD
+  ══════════════════════════════════════════════════════════ -->
+  <section id="download">
+    <div class="section-header reveal">
+      <h2>Get Whipster Today</h2>
+      <p>Free to download on iOS and Android. The ice cream truck is closer than you think.</p>
+    </div>
+
+    <div class="download-badges reveal">
+      <!-- App Store -->
+      <a class="badge-dl" href="#" title="App Store – coming soon">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+        </svg>
+        <div class="badge-text">
+          <span class="badge-sub">Download on the</span>
+          <span class="badge-main">App Store</span>
+        </div>
+      </a>
+      <!-- Google Play -->
+      <a class="badge-dl" href="#" title="Google Play – coming soon">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3.18 23.76c.33.18.71.19 1.05.04l10.27-5.93-2.17-2.17-9.15 8.06zm14.42-8.34L5.59 21.79l2.11 2.11 10.21-5.89-0.31-.59zM1.5 1.37C1.19 1.72 1 2.22 1 2.87v18.26c0 .65.19 1.15.5 1.5l.08.07 10.23-10.23v-.24L1.58 1.3l-.08.07zm20.1 9.12l-2.9-1.68-2.3 2.3 2.3 2.3 2.92-1.68c.83-.48.83-1.27-.02-1.24z"/>
+        </svg>
+        <div class="badge-text">
+          <span class="badge-sub">Get it on</span>
+          <span class="badge-main">Google Play</span>
+        </div>
+      </a>
+    </div>
+    <p class="download-note">Download links will be activated when the app launches on the stores.</p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer>
+    <a class="footer-logo" href="#hero">
+      <img src="Images/whipster_icon.png" alt="Whipster icon" />
+      <span>Whipster</span>
+    </a>
+    <p>&copy; <span id="year" aria-live="polite"></span> Whipster. All rights reserved.</p>
+    <p>The sweetest way to track your ice cream truck. 🍦</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
