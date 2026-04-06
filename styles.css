@@ -243,7 +243,7 @@ section { padding: 5rem 1.5rem; }
 
 /* ── Features ──────────────────────────────────────────────── */
 #features {
-  background: var(--white);
+  background: linear-gradient(160deg, #fff5ee 0%, #f0fffc 100%);
 }
 
 .features-grid {
@@ -280,7 +280,11 @@ section { padding: 5rem 1.5rem; }
 
 .feature-card h3 { margin-bottom: 0.5rem; }
 
-/* individual accent colours */
+/* individual accent colours and card backgrounds */
+.fc-1 { background: linear-gradient(145deg, #fff5ee 0%, #ffe0e0 100%); }
+.fc-2 { background: linear-gradient(145deg, #e8f8f8 0%, #cdf4f0 100%); }
+.fc-3 { background: linear-gradient(145deg, #f6eeff 0%, #e6d2ff 100%); }
+.fc-4 { background: linear-gradient(145deg, #fffce8 0%, #fff3b0 100%); }
 .fc-1 .feature-icon { background: linear-gradient(135deg, #ffe0e0, #ffb3b3); }
 .fc-2 .feature-icon { background: linear-gradient(135deg, #e0f7fa, #80deea); }
 .fc-3 .feature-icon { background: linear-gradient(135deg, #f3e0ff, #ce93d8); }
@@ -351,7 +355,7 @@ section { padding: 5rem 1.5rem; }
 
 /* ── How it works ──────────────────────────────────────────── */
 #how-it-works {
-  background: var(--white);
+  background: linear-gradient(160deg, #f5f0ff 0%, #fff9e6 100%);
 }
 
 .steps {
@@ -393,6 +397,223 @@ section { padding: 5rem 1.5rem; }
 .s4 .step-number { background: linear-gradient(135deg, var(--yellow), #f9c74f); color: var(--dark); }
 
 .step h3 { margin-bottom: 0.5rem; }
+
+/* ── Map Preview ───────────────────────────────────────────── */
+#map-preview {
+  background: linear-gradient(160deg, #e3f2fd 0%, #e8f5e9 100%);
+}
+
+.map-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.20), 0 0 0 5px rgba(255,255,255,0.9);
+}
+
+.map-inner {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  /* City map base – warm cream like light map tiles */
+  background-color: #f0ede8;
+  background-image:
+    /* Major horizontal roads */
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px, transparent 99px,
+      rgba(255,255,255,0.88) 99px, rgba(255,255,255,0.88) 114px
+    ),
+    /* Major vertical roads */
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px, transparent 134px,
+      rgba(255,255,255,0.88) 134px, rgba(255,255,255,0.88) 149px
+    ),
+    /* Minor horizontal roads */
+    repeating-linear-gradient(
+      0deg,
+      transparent 0px, transparent 46px,
+      rgba(255,255,255,0.45) 46px, rgba(255,255,255,0.45) 51px
+    ),
+    /* Minor vertical roads */
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px, transparent 64px,
+      rgba(255,255,255,0.45) 64px, rgba(255,255,255,0.45) 69px
+    );
+}
+
+/* Park areas */
+.map-park {
+  position: absolute;
+  background: linear-gradient(135deg, #b8ddb8, #9fcfa0);
+  border-radius: 6px;
+}
+
+/* Water area */
+.map-water {
+  position: absolute;
+  background: linear-gradient(135deg, #aad3df, #88c0d0);
+  clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* Truck pin icons */
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+  z-index: 10;
+}
+
+.pin-icon-wrap {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.pin-icon-wrap img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  background: white;
+  border-radius: 50%;
+  padding: 7px;
+  border: 3px solid var(--coral);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.22);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.25s;
+}
+
+.map-pin:hover .pin-icon-wrap img {
+  transform: scale(1.18) translateY(-4px);
+}
+
+.pin-pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: rgba(255,107,107,0.28);
+  animation: pin-pulse 2.2s ease-out infinite;
+  animation-delay: var(--pin-delay, 0s);
+  z-index: 1;
+}
+
+@keyframes pin-pulse {
+  0%   { transform: scale(0.7); opacity: 0.9; }
+  100% { transform: scale(2.8); opacity: 0; }
+}
+
+.pin-label {
+  background: rgba(25,25,25,0.78);
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 50px;
+  margin-top: 4px;
+  white-space: nowrap;
+}
+
+/* "You are here" marker */
+.map-you {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.you-dot {
+  width: 16px;
+  height: 16px;
+  background: #4285F4;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(66,133,244,0.55);
+  position: relative;
+  z-index: 2;
+}
+
+.you-ring {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: rgba(66,133,244,0.18);
+  border: 1.5px solid rgba(66,133,244,0.4);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: you-pulse 2.5s ease-out infinite;
+}
+
+@keyframes you-pulse {
+  0%   { transform: translate(-50%, -50%) scale(0.4); opacity: 1; margin-top: 8px; }
+  100% { transform: translate(-50%, -50%) scale(3.8); opacity: 0; margin-top: 8px; }
+}
+
+.you-label {
+  background: #4285F4;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 50px;
+  margin-top: 14px;
+  white-space: nowrap;
+}
+
+/* LIVE badge */
+.map-live-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(0,0,0,0.72);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 900;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  letter-spacing: 1.5px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 20;
+}
+
+/* Decorative map controls (zoom buttons) */
+.map-controls {
+  position: absolute;
+  bottom: 16px;
+  right: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  z-index: 20;
+}
+
+.map-ctrl-btn {
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--dark);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  user-select: none;
+  cursor: default;
+}
 
 /* ── Download ──────────────────────────────────────────────── */
 #download {
