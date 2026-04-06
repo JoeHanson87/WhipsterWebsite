@@ -30,6 +30,7 @@
     <ul class="nav-links">
       <li><a href="#features">Features</a></li>
       <li><a href="#trucks">Trucks</a></li>
+      <li><a href="#map-preview">Map</a></li>
       <li><a href="#how-it-works">How it Works</a></li>
       <li><a class="nav-cta" href="#download">Download</a></li>
     </ul>
@@ -142,6 +143,87 @@
       <div class="truck-card reveal">
         <img src="Images/donuttruck.png" alt="Donut truck" />
         <span>Donut Van</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       MAP PREVIEW
+  ══════════════════════════════════════════════════════════ -->
+  <section id="map-preview">
+    <div class="section-header reveal">
+      <span class="section-label" style="background:#e8f5e9;color:#2e7d32;">📍 Live Map</span>
+      <h2>See the trucks in real time</h2>
+      <p>Open Whipster and watch nearby food trucks appear live on your map, updated every few seconds.</p>
+    </div>
+
+    <div class="map-wrap reveal">
+      <div class="map-inner">
+
+        <!-- Park areas -->
+        <div class="map-park" style="top:6%;right:4%;width:165px;height:105px;"></div>
+        <div class="map-park" style="bottom:12%;left:2%;width:90px;height:70px;"></div>
+
+        <!-- Water (bottom-right corner) -->
+        <div class="map-water" style="bottom:0;right:0;width:210px;height:145px;"></div>
+
+        <!-- Truck pins -->
+        <div class="map-pin" style="top:22%;left:17%;--pin-delay:0s;">
+          <div class="pin-icon-wrap">
+            <div class="pin-pulse"></div>
+            <img src="Images/icecreamtruck.png" alt="Ice cream truck" />
+          </div>
+          <span class="pin-label">Ice Cream 🍦</span>
+        </div>
+
+        <div class="map-pin" style="top:55%;left:58%;--pin-delay:0.5s;">
+          <div class="pin-icon-wrap">
+            <div class="pin-pulse"></div>
+            <img src="Images/burgertruck.png" alt="Burger van" />
+          </div>
+          <span class="pin-label">Burger Van 🍔</span>
+        </div>
+
+        <div class="map-pin" style="top:72%;left:32%;--pin-delay:1s;">
+          <div class="pin-icon-wrap">
+            <div class="pin-pulse"></div>
+            <img src="Images/pizzatruck.png" alt="Pizza truck" />
+          </div>
+          <span class="pin-label">Pizza Truck 🍕</span>
+        </div>
+
+        <div class="map-pin" style="top:28%;left:72%;--pin-delay:1.5s;">
+          <div class="pin-icon-wrap">
+            <div class="pin-pulse"></div>
+            <img src="Images/donuttruck.png" alt="Donut van" />
+          </div>
+          <span class="pin-label">Donut Van 🍩</span>
+        </div>
+
+        <div class="map-pin" style="top:75%;left:70%;--pin-delay:0.8s;">
+          <div class="pin-icon-wrap">
+            <div class="pin-pulse"></div>
+            <img src="Images/tacotruck.png" alt="Taco truck" />
+          </div>
+          <span class="pin-label">Taco Truck 🌮</span>
+        </div>
+
+        <!-- You are here -->
+        <div class="map-you" style="top:48%;left:40%;">
+          <div class="you-dot"></div>
+          <div class="you-ring"></div>
+          <span class="you-label">You 📱</span>
+        </div>
+
+        <!-- LIVE badge -->
+        <div class="map-live-badge">🔴 LIVE</div>
+
+        <!-- Decorative zoom controls -->
+        <div class="map-controls">
+          <div class="map-ctrl-btn">+</div>
+          <div class="map-ctrl-btn">−</div>
+        </div>
+
       </div>
     </div>
   </section>
