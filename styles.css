@@ -141,11 +141,12 @@ nav {
 .hero-inner { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; }
 
 .hero-icon {
-  width: clamp(100px, 18vw, 160px);
-  height: clamp(100px, 18vw, 160px);
+  display: block;
+  width: clamp(160px, 28vw, 240px);
+  height: clamp(160px, 28vw, 240px);
   border-radius: 30px;
   box-shadow: 0 12px 40px rgba(255,107,107,0.35);
-  margin-bottom: 1.6rem;
+  margin: 0 auto 1.6rem;
   animation: pop-in 0.7s cubic-bezier(0.175,0.885,0.32,1.275) both;
 }
 
